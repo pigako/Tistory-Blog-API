@@ -1,6 +1,7 @@
 import { Module } from "@nestjs/common";
 import { ConfigModule } from "@nestjs/config";
 import { TypeOrmModule } from "@nestjs/typeorm";
+import { LoginModule } from './login/login.module';
 
 import * as Joi from "joi";
 @Module({
@@ -30,7 +31,8 @@ import * as Joi from "joi";
             synchronize: true,
             logging: true,
             entities: [__dirname + "/entities/*{.ts,.js}"]
-        })
+        }),
+        LoginModule
     ]
 })
 export class AppModule {}
