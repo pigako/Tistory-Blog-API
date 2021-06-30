@@ -3,7 +3,7 @@ import { BeforeInsert, BeforeUpdate, Column, Entity, PrimaryGeneratedColumn } fr
 import * as bcrypt from "bcrypt";
 
 @Entity()
-export class UserEntity {
+export class User {
     @PrimaryGeneratedColumn("increment", { type: "bigint", unsigned: true, comment: "유저 유니크 아이디" })
     userUid: number;
 
